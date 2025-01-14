@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css"> 
+    <script src="login.js" defer></script> 
+</head>
+<body>
+    <div class="top">
+        <div class="toplink">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
+    </div>
+    <div class="page">
+        <img src="images/Keychain_Locked@2x.png" alt="Login Icon" class="keypng">
+        <div class="formw">
+            <form id="lcon">
+                <label for="userr" class="ibox">Username</label>
+                <input type="text" id="userr" placeholder="Enter your username" required>
+                <label for="passr" class="ibox">Password</label>
+                <input type="password" id="passr" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="resulting-error" id="resultingError"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+

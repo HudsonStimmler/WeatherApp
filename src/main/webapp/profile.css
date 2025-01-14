@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir Next', Arial, sans-serif;
+    min-height: 100vh;
+    background: url('images/background.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+    padding: 0 20px;
+    height: 60px; 
+    z-index: 1000;
+    overflow: visible; 
+}
+
+.toplink a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px; 
+    padding: 0; 
+    font-size: 16px;
+    line-height: 1.2; 
+    font-weight: bold; 
+    transition: color 0.3s;
+}
+
+.toplink a:hover {
+    color: #ccc;
+}
+
+.page {
+    margin-top: 80px;
+    padding: 20px;
+    text-align: center;
+}
+
+.history {
+    margin: 0 auto;
+    width: 60%; 
+    background-color: rgba(128, 128, 128, 0.5);
+    color: white;
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+table tr:not(:last-child) {
+    border-bottom: 1px solid white;
+}
+
+#detailsDiv {
+    margin-top: 30px;
+    padding: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.icon-item {
+    flex: 0 1 calc(25% - 10px);
+    margin: 5px;
+    text-align: center;
+}
+
+.icon-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.icon-item p {
+    margin: 0;
+    color: white;
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    .icon-item {
+        flex: 0 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .icon-item {
+        flex: 0 1 calc(100% - 10px);
+    }
+}

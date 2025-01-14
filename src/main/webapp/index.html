@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Conditions</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpFetgVC7bu6rxxqUWi9aAaMEbTicu3fA"></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="headerContent">
+            
+        </div>
+        <div class="headerURL" id="headerURL">
+            
+        </div>
+    </div>
+    <div class="content">
+        <img src="images/logo.png" alt="Weather IMG" class="logo-img">
+        <div class="searchContainer" id="searchContainer">
+            <div class="searchForm" id="searchFormHead">
+                
+            </div>
+            <div class="radioOptions" id="radioOptions">
+                <label>
+                    <input type="radio" name="searchType" value="city" checked> 
+                    City
+                </label>
+                <label>
+                    <input type="radio" name="searchType" value="latlong"> 
+                    Lat/Long
+                </label>
+            </div>
+            <button id="display-all">Display All</button>
+        </div>
+        <div id="searchResults" style="margin-top: 20px; display: none;">
+            <div class="search-results-header">
+                <h2 class="all-cities-title">All Cities</h2>
+                <div class="sort-by-container">
+                    <label for="sortOptions">Sort by:</label>
+                    <select id="sortOptions">
+                        <option value="tempLowDesc">Temp Low DESC</option>
+                        <option value="tempLowAsc">Temp Low ASC</option>
+                        <option value="tempHighDesc">Temp High DESC</option>
+                        <option value="tempHighAsc">Temp High ASC</option>
+                        <option value="cityNameAsc">City Name A-Z</option>
+                        <option value="cityNameDesc">City Name Z-A</option>
+                    </select>
+                </div>
+            </div>
+            <table id="resultsTable" style="margin-top: 10px; width: 100%; color: white;">
+                <thead>
+                    <tr>
+                        <th>City Name</th>
+                        <th>Temp. Low (°F)</th>
+                        <th>Temp. High (°F)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="cityDetails" style="display: none;">
+            
+        </div>
+    </div>
+
+    <div id="googleApi" style="display: none;">
+        <div id="apiBacking"></div>
+        <div id="apiHeader">
+            <div id="api"></div>
+        </div>
+    </div>
+</body>
+</html>
+
