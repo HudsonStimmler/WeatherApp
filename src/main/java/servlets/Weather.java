@@ -9,7 +9,7 @@ import java.net.*;
 @WebServlet("/weather") 
 public class Weather extends HttpServlet {
     public static final long serialVersionUID = 1L;
-    public static final String api = "16729b0e0f761044cc9a69ca47202bc2"; 
+    public static final String api = "key"; 
     public static final String urlb = "https://api.openweathermap.org/data/2.5/find";
 
     @Override
