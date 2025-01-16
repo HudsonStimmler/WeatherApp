@@ -136,7 +136,7 @@ function getWeath(event){
         query = `lat=${encodeURIComponent(lat)}&lon=${encodeURIComponent(lon)}`;
         searchQuery = `${lat}, ${lon}`;
     }
-    fetch(`https://api.openweathermap.org/data/2.5/find?${query}&units=imperial&appid=16729b0e0f761044cc9a69ca47202bc2`)
+    fetch(`https://api.openweathermap.org/data/2.5/find?${query}&units=imperial&appid=key`)
         .then(response => response.json())
         .then(result => {
             if (result.cod && result.cod !== "200") {
@@ -214,7 +214,7 @@ function displaycity(citdat){
     cityDetails.style.display = "block"; 
     document.body.classList.remove("search-view");
     movesTOc(); 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?id=${citdat.id}&units=imperial&appid=16729b0e0f761044cc9a69ca47202bc2`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?id=${citdat.id}&units=imperial&appid=key`)
         .then(response => response.json())
         .then(detailedData => {
             cityDetails.innerHTML = `
