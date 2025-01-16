@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function getweatherc(city, detailsDiv) {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&units=imperial&appid=16729b0e0f761044cc9a69ca47202bc2`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&units=imperial&appid=key`)
             .then(response => response.json())
             .then(data => {
                 displaywd(data, detailsDiv);
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function getweatherll(lat, lon, detailsDiv) {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${encodeURIComponent(lat)}&lon=${encodeURIComponent(lon)}&units=imperial&appid=16729b0e0f761044cc9a69ca47202bc2`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${encodeURIComponent(lat)}&lon=${encodeURIComponent(lon)}&units=imperial&appid=key`)
             .then(response => response.json())
             .then(data => {
                 displaywd(data, detailsDiv);
